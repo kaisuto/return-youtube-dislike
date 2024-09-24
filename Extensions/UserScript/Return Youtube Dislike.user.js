@@ -512,6 +512,9 @@ function getVideoId() {
     if (pathname.startsWith("/shorts")) {
       return pathname.slice(8);
     }
+    if (pathname.startsWith("/live")) {
+      return pathname.slice(6)
+    }
     return urlObject.searchParams.get("v");
   }
 }
